@@ -48,6 +48,8 @@ class CreateAccount extends StatelessWidget {
                 color: primary
               ),),
             ),
+
+            const Text('TEste'),
           ],
         ),
         
