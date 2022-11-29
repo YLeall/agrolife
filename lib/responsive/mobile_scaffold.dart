@@ -28,6 +28,55 @@ class _MobileScaffoldState extends State<MobileScaffold> {
         children: [
 
           Container(
+            margin: const EdgeInsets.only(left: 14, top: 30),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(left: 50),
+                      child: Image.asset("lib/images/chinken_p2.png")
+                    ),
+                    
+                    Container(
+                      margin: const EdgeInsets.only(left: 80, top: 20),
+                      child: Image.asset("lib/images/sun_p2.png")
+                    ),
+                  ],
+                ),
+              ],
+            )
+          ),
+
+          Container(
+            margin: const EdgeInsets.only(left: 8, top: 20),
+            child: Column(
+             
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Container(
+                      //margin: const EdgeInsets.only(right: 50),
+                      child: Image.asset("lib/images/leaf_p2.png")
+                    ),
+                    
+                    Container(
+                      //margin: const EdgeInsets.only(left: 140, top: 20),
+                      child: Image.asset("lib/images/pig_p2.png")
+                    ),
+                  ],
+                ),
+              ],
+            )
+          ),
+
+
+          const SizedBox(height: 45,),
+
+         
+
+          Container(
             margin: const EdgeInsets.only(left: 8),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
