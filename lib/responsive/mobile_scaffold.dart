@@ -13,8 +13,12 @@ class MobileScaffold extends StatefulWidget {
 }
 
 class _MobileScaffoldState extends State<MobileScaffold> {
+
   @override
   Widget build(BuildContext context) {
+    var wid = MediaQuery.of(context).size.width;
+    var hei = MediaQuery.of(context).size.height;
+
     return Scaffold(
 
       backgroundColor: primary,
@@ -28,49 +32,13 @@ class _MobileScaffoldState extends State<MobileScaffold> {
         children: [
 
           Container(
-            margin: const EdgeInsets.only(left: 14, top: 30),
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.only(left: 50),
-                      child: Image.asset("lib/images/chinken_p2.png")
-                    ),
-                    
-                    Container(
-                      margin: const EdgeInsets.only(left: 80, top: 20),
-                      child: Image.asset("lib/images/sun_p2.png")
-                    ),
-                  ],
-                ),
-              ],
-            )
+            alignment: Alignment.center,
+            margin: const EdgeInsets.only(top: 70),
+            child: Image.asset('lib/images/logoCorte.png', height: 190,)
           ),
 
-          Container(
-            margin: const EdgeInsets.only(left: 8, top: 20),
-            child: Column(
-             
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Container(
-                      //margin: const EdgeInsets.only(right: 50),
-                      child: Image.asset("lib/images/leaf_p2.png")
-                    ),
-                    
-                    Container(
-                      //margin: const EdgeInsets.only(left: 140, top: 20),
-                      child: Image.asset("lib/images/pig_p2.png")
-                    ),
-                  ],
-                ),
-              ],
-            )
-          ),
-
+          //Text('$hei'),
+          //Text('$wid'),
 
           const SizedBox(height: 45,),
 
@@ -114,7 +82,7 @@ class _MobileScaffoldState extends State<MobileScaffold> {
             ),
           ),
 
-          const SizedBox(height: 50,),
+          const SizedBox(height: 100,),
 
           Center(
             child: Container(

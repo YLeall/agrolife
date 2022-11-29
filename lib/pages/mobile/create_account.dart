@@ -83,6 +83,18 @@ class CreateAccount extends StatelessWidget {
             ),
           ),
 
+          SizedBox(
+            width: 200,
+            child: TextFormField(
+              decoration: const InputDecoration(
+                
+                icon: Icon(Icons.person),
+              
+                labelText: 'Nome do usuário'
+              ),
+            ),
+          )
+
         
 
         ],

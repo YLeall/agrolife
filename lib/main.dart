@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: primary),
-      home: const MobileScaffold(),
+      home: const CreateAccount(),
     );
   }
 }
