@@ -1,8 +1,4 @@
-import 'package:agrolife/pages/mobile/create_account.dart';
 import 'package:agrolife/pages/splash_screen.dart';
-import 'package:agrolife/responsive/mobile_scaffold.dart';
-import 'package:agrolife/responsive/responsive_layout.dart';
-import 'package:agrolife/responsive/tablet_scaffold.dart';
 import 'package:agrolife/utils/style.dart';
 import 'package:flutter/material.dart';
 
@@ -17,8 +13,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primaryColor: primary),
-      home: const CreateAccount(),
+      theme: ThemeData(
+        primaryColor: primary,
+        textSelectionTheme: const TextSelectionThemeData(
+          cursorColor: Colors.black
+        ),
+      ),
+      home: const SplashScreen(),
     );
   }
 }
