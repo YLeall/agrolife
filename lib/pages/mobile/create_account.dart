@@ -1,4 +1,5 @@
 import 'package:agrolife/pages/mobile/create_account_two.dart';
+import 'package:agrolife/pages/mobile/login_account.dart';
 import 'package:agrolife/responsive/mobile_scaffold.dart';
 import 'package:agrolife/responsive/responsive_layout.dart';
 import 'package:agrolife/responsive/tablet_scaffold.dart';
@@ -69,7 +70,7 @@ class _CreateAccountState extends State<CreateAccount> {
           
             children: [
               
-               const SizedBox(height: 30,),
+              const SizedBox(height: 30,),
 
               Container(
                 alignment: Alignment.centerLeft,
@@ -178,7 +179,7 @@ class _CreateAccountState extends State<CreateAccount> {
                               hintStyle: Style.hintStyle,
                               labelStyle: Style.textInput,
                             
-                              labelText: 'Endereço de email'
+                              labelText: 'Endereço de e-mail'
                             ),
                           ),
                         ),
@@ -288,9 +289,8 @@ class _CreateAccountState extends State<CreateAccount> {
               GestureDetector(
                 onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(
                     builder: (context){
-
                       return ResponsiveLayout(
-                        mobileScaffold: CreateAccountTwo(),
+                        mobileScaffold: const CreateAccountTwo(),
                         tabletScaffold: const TabletScaffold(),
                       );
                     }
@@ -315,6 +315,8 @@ class _CreateAccountState extends State<CreateAccount> {
 
               const SizedBox(height: 30,),
 
+              /*
+
               Container(
                 child: Text.rich(
                   TextSpan(
@@ -328,6 +330,35 @@ class _CreateAccountState extends State<CreateAccount> {
                     ],
                   ),
                 ),
+              ),
+
+              */
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Você já é um membro? ',
+                    style: Style.textMember,
+                  ),
+                  GestureDetector(
+                    onTap: () => Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context){
+                          return ResponsiveLayout(
+                            mobileScaffold: const LoginAccount(),
+                            tabletScaffold: const TabletScaffold(),
+                          );
+                        }
+                      )
+                    ),
+                    child: Text(
+                      ' Entrar',
+                      style: Style.textMemberGreen,
+                    ),
+                  ),
+                ],
               ),
 
               const SizedBox(height: 15,),

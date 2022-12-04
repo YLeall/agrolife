@@ -89,7 +89,9 @@ class _MobileScaffoldState extends State<MobileScaffold> {
               const SizedBox(height: 100,),
         
               GestureDetector(
-                onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(
+                onTap: () => Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
                     builder: (context){
                       return ResponsiveLayout(
                         mobileScaffold: const LoginAccount(),
