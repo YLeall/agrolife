@@ -15,10 +15,11 @@ class CreateAccount extends StatefulWidget {
 }
 
 class _CreateAccountState extends State<CreateAccount> {
+
+  bool isChecked = false;
+
   @override
   Widget build(BuildContext context) {
-    bool isChecked = false;
-
     return Scaffold(
 
       backgroundColor: Colors.grey[300],
@@ -107,113 +108,115 @@ class _CreateAccountState extends State<CreateAccount> {
               const SizedBox(height: 30,),
 
 
-              Container(
-                alignment: Alignment.centerLeft,
-                margin: const EdgeInsets.only(left: 20),
-                
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-
-                    Container(
-                      margin: const EdgeInsets.only(right: 28),
-                      child: SizedBox(
-                        width: 300,
-                        height: 50,
-                        child: TextFormField(
-                          keyboardType: TextInputType.text,
-                          decoration: InputDecoration(
+              Form(
+                child: Container(
+                  alignment: Alignment.centerLeft,
+                  margin: const EdgeInsets.only(left: 20),
+                  
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+              
+                      Container(
+                        margin: const EdgeInsets.only(right: 28),
+                        child: SizedBox(
+                          width: 350,
+                          height: 50,
+                          child: TextFormField(
+                            keyboardType: TextInputType.text,
+                            decoration: InputDecoration(
+                              
+                              icon: const Icon(Icons.person),
+              
+                              labelStyle: Style.textInput,
                             
-                            icon: const Icon(Icons.person),
-
-                            labelStyle: Style.textInput,
-                          
-                            labelText: 'Nome do usuário',
-                            hintText: 'Ex: NomeQualquer',
-                            hintStyle: Style.hintStyle,
-
+                              labelText: 'Nome do usuário',
+                              hintText: 'Ex: NomeQualquer',
+                              hintStyle: Style.hintStyle,
+              
+                            ),
                           ),
                         ),
                       ),
-                    ),
-
-                    const SizedBox(height: 25,),
-
-                    Container(
-                      margin: const EdgeInsets.only(right: 28),
-                      child: SizedBox(
-                        width: 300,
-                        height: 50,
-                        child: TextFormField(
-                          keyboardType: TextInputType.phone,
-                          decoration: InputDecoration(
+              
+                      const SizedBox(height: 25,),
+              
+                      Container(
+                        margin: const EdgeInsets.only(right: 28),
+                        child: SizedBox(
+                          width: 350,
+                          height: 50,
+                          child: TextFormField(
+                            keyboardType: TextInputType.phone,
+                            decoration: InputDecoration(
+                              
+                              icon: const Icon(Icons.phone),
+              
+                              labelStyle: Style.textInput,
+                              hintText: 'Ex: (xx) xxxxx-xxxx',
+                              hintStyle: Style.hintStyle,
                             
-                            icon: const Icon(Icons.phone),
-
-                            labelStyle: Style.textInput,
-                            hintText: 'Ex: (xx) xxxxx-xxxx',
-                            hintStyle: Style.hintStyle,
-                          
-                            labelText: 'Número de telefone'
+                              labelText: 'Número de telefone'
+                            ),
                           ),
                         ),
                       ),
-                    ),
-
-                    const SizedBox(height: 25,),
-
-                    Container(
-                      margin: const EdgeInsets.only(right: 28),
-                      child: SizedBox(
-                        width: 300,
-                        height: 50,
-                        child: TextFormField(
-                          keyboardType: TextInputType.emailAddress,
-                          decoration: InputDecoration(
+              
+                      const SizedBox(height: 25,),
+              
+                      Container(
+                        margin: const EdgeInsets.only(right: 28),
+                        child: SizedBox(
+                          width: 350,
+                          height: 50,
+                          child: TextFormField(
+                            keyboardType: TextInputType.emailAddress,
+                            decoration: InputDecoration(
+                              
+                              icon: const Icon(Icons.email),
+                              hintText: 'Ex: email@gmail.com',
+                              hintStyle: Style.hintStyle,
+                              labelStyle: Style.textInput,
                             
-                            icon: const Icon(Icons.email),
-                            hintText: 'Ex: email@gmail.com',
-                            hintStyle: Style.hintStyle,
-                            labelStyle: Style.textInput,
-                          
-                            labelText: 'Endereço de email'
+                              labelText: 'Endereço de email'
+                            ),
                           ),
                         ),
                       ),
-                    ),
-
-                    const SizedBox(height: 25,),
-
-                    Container(
-                      margin: const EdgeInsets.only(right: 28),
-                      child: SizedBox(
-                        width: 300,
-                        height: 50,
-                        child: TextFormField(
-                          keyboardType: TextInputType.visiblePassword,
-                          decoration: InputDecoration(
-                            
-                            icon: const Icon(Icons.key),
-
-                            labelStyle: Style.textInput,
-                            hintText: 'Ex: Senha@123',
-                            hintStyle: Style.hintStyle,
-                            suffixIcon: const Icon(Icons.remove_red_eye),
-
-                            // focusedBorder: UnderlineInputBorder(
-                            //   borderSide: BorderSide(
-                            //     color: Style.colorInputCreateAccount,
-                            //     width: 2,
-                            //   )
-                            // ),
-                            
-                            labelText: 'Senha'
+              
+                      const SizedBox(height: 25,),
+              
+                      Container(
+                        margin: const EdgeInsets.only(right: 28),
+                        child: SizedBox(
+                          width: 350,
+                          height: 50,
+                          child: TextFormField(
+                            keyboardType: TextInputType.visiblePassword,
+                            decoration: InputDecoration(
+                              
+                              icon: const Icon(Icons.key),
+              
+                              labelStyle: Style.textInput,
+                              hintText: 'Ex: Senha@123',
+                              hintStyle: Style.hintStyle,
+                              suffixIcon: const Icon(Icons.remove_red_eye),
+              
+                              // focusedBorder: UnderlineInputBorder(
+                              //   borderSide: BorderSide(
+                              //     color: Style.colorInputCreateAccount,
+                              //     width: 2,
+                              //   )
+                              // ),
+                              
+                              labelText: 'Senha'
+                            ),
                           ),
                         ),
                       ),
-                    ),
-        
-                  ],
+                      
+                    ],
+                  ),
                 ),
               ),
         
@@ -234,17 +237,19 @@ class _CreateAccountState extends State<CreateAccount> {
 
                               Checkbox(
                                 value: isChecked,
-                                activeColor: Colors.green,
+                                activeColor: Style.primaryColor,
              
-                                onChanged: (bool? value){
+                                onChanged: (bool? checked){
+                                  //print(checked);
                                   setState(() {
-                                    isChecked = value!;
+                                    isChecked = checked!;
+                                    //isChecked = !isChecked;
                                   });
                                 }
                               ),
                               
                               Container(
-                                margin: const EdgeInsets.only(left: 5),
+                                margin: const EdgeInsets.only(left: 12),
                                 child: Text(
                                   'Ao se inscrever, você concorda com nossos',
                                   style: GoogleFonts.poppins(
@@ -263,7 +268,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       ],
                     ),
                     Container(
-                      margin: const EdgeInsets.only(left: 53),
+                      margin: const EdgeInsets.only(left: 59),
                       child: Text(
                         'termos de uso',
                         style: GoogleFonts.poppins(
@@ -317,14 +322,15 @@ class _CreateAccountState extends State<CreateAccount> {
                     style: Style.textMember,
                     children: <TextSpan>[
                       TextSpan(
-                          text: ' Entrar',
-                          style: Style.textMemberGreen,
-                        )
-                      // can add more TextSpans here...
+                        text: ' Entrar',
+                        style: Style.textMemberGreen,
+                      )
                     ],
                   ),
                 ),
               ),
+
+              const SizedBox(height: 15,),
               
             ],
           ),

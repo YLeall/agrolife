@@ -1,4 +1,5 @@
 import 'package:agrolife/pages/mobile/create_account.dart';
+import 'package:agrolife/pages/mobile/login_account.dart';
 import 'package:agrolife/responsive/responsive_layout.dart';
 import 'package:agrolife/responsive/tablet_scaffold.dart';
 import 'package:agrolife/utils/style.dart';
@@ -87,27 +88,38 @@ class _MobileScaffoldState extends State<MobileScaffold> {
         
               const SizedBox(height: 100,),
         
-              Center(
-                child: Container(
-                  width: 348,
-                  height: 48,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(100)
-                  ),
-        
-                  child: Center(
-                    child: Text('Fazer Login',style: GoogleFonts.poppins(
-                      color: primary, 
-                      fontSize: 16, 
-                      fontWeight: FontWeight.w300),
-                    )
+              GestureDetector(
+                onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(
+                    builder: (context){
+                      return ResponsiveLayout(
+                        mobileScaffold: const LoginAccount(),
+                        tabletScaffold: const TabletScaffold(),
+                      );
+                    }
+                  )
+                ),
+                child: Center(
+                  child: Container(
+                    width: 348,
+                    height: 48,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(100)
+                    ),
+                      
+                    child: Center(
+                      child: Text('Fazer Login',style: GoogleFonts.poppins(
+                        color: primary, 
+                        fontSize: 16, 
+                        fontWeight: FontWeight.w300),
+                      )
+                    ),
                   ),
                 ),
               ),
         
               const SizedBox(height: 20,),
-        
+      
               GestureDetector(
                 onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(
                     builder: (context){
