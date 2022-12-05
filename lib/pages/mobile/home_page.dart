@@ -20,6 +20,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.grey[300],
 
       drawer: Drawer(
+        backgroundColor: Style.primaryColor,
         width: teste,
         child: ListView(
           padding: const EdgeInsets.all(20),
@@ -61,8 +62,64 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-        
       ),
+
+
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: ListView(
+          children: [
+
+            Container(
+              height: 128,
+              width: 300,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(20),
+
+              ),
+
+              child: Column(
+                children: [
+
+                  Container(
+                    
+                    child: IntrinsicHeight(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text('Salvador'),
+                          const VerticalDivider(color: Colors.white,),
+                          const Text('Bahia'),
+                          Image.asset('lib/images/suntemp.png'),
+                        ],
+                      ),
+                    )
+                  ),
+
+                  Container(
+                    //color: Colors.blue,
+                    child: Column(
+                      children: [
+                        const Text('Hoje'),
+                        const Text('23º'),
+                        Row(
+                          children: const [
+                            Text('^26'),
+                            Text('^18'),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+
+                ],
+              ),
+            ),
+
+          ],
+        ),
+      )
     );
   }
 }

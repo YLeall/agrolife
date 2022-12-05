@@ -18,6 +18,7 @@ class CreateAccount extends StatefulWidget {
 class _CreateAccountState extends State<CreateAccount> {
 
   bool isChecked = false;
+  bool showPassword = false;
 
   @override
   Widget build(BuildContext context) {
@@ -148,6 +149,7 @@ class _CreateAccountState extends State<CreateAccount> {
                           width: 350,
                           height: 50,
                           child: TextFormField(
+                         
                             keyboardType: TextInputType.phone,
                             decoration: InputDecoration(
                               
@@ -201,7 +203,14 @@ class _CreateAccountState extends State<CreateAccount> {
                               labelStyle: Style.textInput,
                               hintText: 'Ex: Senha@123',
                               hintStyle: Style.hintStyle,
-                              suffixIcon: const Icon(Icons.remove_red_eye),
+                              suffixIcon: GestureDetector( 
+                                child: showPassword == false ?  const Icon(Icons.visibility_off) : const Icon(Icons.visibility),
+                                onTap: () {
+                                  setState(() {
+                                    showPassword = !showPassword;
+                                  });
+                                },
+                              ),
               
                               // focusedBorder: UnderlineInputBorder(
                               //   borderSide: BorderSide(
@@ -210,8 +219,9 @@ class _CreateAccountState extends State<CreateAccount> {
                               //   )
                               // ),
                               
-                              labelText: 'Senha'
+                              labelText: 'Senha',
                             ),
+                            obscureText: showPassword == false ? true : false,
                           ),
                         ),
                       ),

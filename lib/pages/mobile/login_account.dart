@@ -18,6 +18,8 @@ class LoginAccount extends StatefulWidget {
 
 class _LoginAccountState extends State<LoginAccount> {
 
+  bool showPassword = false;
+
   @override
   Widget build(BuildContext context) {
 
@@ -233,11 +235,23 @@ class _LoginAccountState extends State<LoginAccount> {
                         keyboardType: TextInputType.text,
                         style: const TextStyle(fontSize: 16, height: 1),
                         decoration: InputDecoration(
-                          suffixIcon: const Icon(Icons.remove_red_eye),
+
+                          suffixIcon: GestureDetector( 
+                            child: showPassword == false ? const Icon(Icons.visibility_off) : const Icon(Icons.visibility),
+                            onTap: () {
+                              setState(() {
+                                showPassword = !showPassword;
+                              });
+                            },
+                          ),
+
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8), 
                           )
                         ),
+                        //obscureText: !showPassword,
+                        obscureText: showPassword == false ? true : false,
+
                       ),
                     ),
 
