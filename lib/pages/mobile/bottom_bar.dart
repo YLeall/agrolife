@@ -45,7 +45,7 @@ class _BottomBarState extends State<BottomBar> {
         //type: BottomNavigationBarType.fixed,
         onTap: searchOnTapIndex,
 
-
+        
         items: const [
 
           BottomNavigationBarItem(

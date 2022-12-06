@@ -1,4 +1,4 @@
-import 'package:agrolife/pages/mobile/bottom_bar.dart';
+import 'package:agrolife/pages/mobile/notifications.dart';
 import 'package:agrolife/utils/style.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           cursorColor: Colors.black
         ),
       ),
-      home: const BottomBar(),
+      home: const PageNotifications(),
     );
   }
 }

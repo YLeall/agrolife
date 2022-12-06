@@ -1,3 +1,6 @@
+import 'package:agrolife/pages/mobile/notifications.dart';
+import 'package:agrolife/responsive/responsive_layout.dart';
+import 'package:agrolife/responsive/tablet_scaffold.dart';
 import 'package:agrolife/utils/card_home_page.dart';
 import 'package:agrolife/utils/scroll.dart';
 import 'package:agrolife/utils/style.dart';
@@ -36,16 +39,274 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Style.primaryColor,
         width: teste,
         child: ListView(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(8),
           children: [
 
             ListTile(
-              leading: const Icon(Icons.arrow_back),
-              title: const Text('Sair'),
+              leading: const Icon(Icons.arrow_back, color: Colors.white,),
+
+              /*title: Text(
+                'Bem vindo, Alex',
+                style: GoogleFonts.poppins(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
+              ),*/
+
               onTap: () {
                 Navigator.pop(context);
               },
             ),
+
+            const SizedBox(height: 10,),
+
+            ListTile(
+
+              title: Text(
+                'Bem vindo, Alex',
+                style: GoogleFonts.poppins(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
+              ),
+
+            ),
+
+            ListTile(
+              leading: Image.asset('lib/images/logoCorte.png', height: 200,),
+
+              title: Text(
+                'Agrolife',
+                style: GoogleFonts.poppins(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
+              ),
+
+              subtitle: Text(
+                '@agrolife',
+                 style: GoogleFonts.poppins(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
+              ),
+              
+            ),
+
+            const SizedBox(height: 20,),
+
+            ListTile(
+              minLeadingWidth: 20,
+              leading: const Icon(Icons.notifications, color: Colors.white,),
+              title: Text(
+                'Notificações',
+                style: GoogleFonts.poppins(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
+              ),
+              trailing: const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white,),
+
+              onTap: () {
+                Navigator.pop(context);
+
+                Future.delayed(const Duration(milliseconds: 500), () {
+                  Navigator.pushReplacement(
+                  context, 
+                  MaterialPageRoute(
+                    builder: (context){
+                      return ResponsiveLayout(
+                        mobileScaffold: const PageNotifications(),
+                        tabletScaffold: const TabletScaffold(),
+                      );
+                    }
+                  )
+                );
+                });
+
+                
+
+              },
+              
+            ),
+
+            const Divider(color: Colors.white,),
+
+            ListTile(
+              minLeadingWidth: 20,
+              leading: const Icon(Icons.security, color: Colors.white,),
+              title: Text(
+                'Segurança',
+                style: GoogleFonts.poppins(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
+              ),
+              trailing: const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white,),
+
+              onTap: () {
+                Navigator.pop(context);
+              },
+              
+            ),
+
+            const Divider(color: Colors.white,),
+
+            ListTile(
+              minLeadingWidth: 20,
+              leading: const Icon(Icons.settings, color: Colors.white,),
+              title: Text(
+                'Configurações',
+                style: GoogleFonts.poppins(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
+              ),
+              trailing: const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white,),
+
+              onTap: () {
+                Navigator.pop(context);
+              },
+              
+            ),
+
+            const Divider(color: Colors.white,),
+
+            ListTile(
+              minLeadingWidth: 20,
+              leading: const Icon(Icons.edit, color: Colors.white,),
+              title: Text(
+                'Editar dados do Perfil',
+                style: GoogleFonts.poppins(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
+              ),
+              trailing: const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white,),
+
+              onTap: () {
+                Navigator.pop(context);
+              },
+              
+            ),
+
+            const Divider(color: Colors.white,),
+
+            ListTile(
+              minLeadingWidth: 20,
+              leading: const Icon(Icons.local_florist, color: Colors.white,),
+              title: Text(
+                'Lista de Desejo',
+                style: GoogleFonts.poppins(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
+              ),
+              trailing: const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white,),
+
+              onTap: () {
+                Navigator.pop(context);
+              },
+              
+            ),
+
+            const Divider(color: Colors.white,),
+
+            ListTile(
+              minLeadingWidth: 20,
+              leading: const Icon(Icons.attach_money, color: Colors.white,),
+              title: Text(
+                'Finanças',
+                style: GoogleFonts.poppins(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
+              ),
+              trailing: const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white,),
+
+              onTap: () {
+                Navigator.pop(context);
+              },
+              
+            ),
+
+            const Divider(color: Colors.white,),
+            //const SizedBox(height: 50,),
+
+
+            ListTile(
+              minLeadingWidth: 20,
+              leading: const Icon(Icons.help, color: Colors.white,),
+              title: Text(
+                'Me Ajude',
+                style: GoogleFonts.poppins(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
+              ),
+              trailing: const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white,),
+
+              onTap: () {
+                Navigator.pop(context);
+              },
+              
+            ),
+
+            const Divider(color: Colors.white,),
+
+            ListTile(
+              minLeadingWidth: 20,
+              leading: const Icon(Icons.exit_to_app, color: Colors.white,),
+              title: Text(
+                'Sair',
+                style: GoogleFonts.poppins(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
+              ),
+              trailing: const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white,),
+
+              onTap: () {
+                Navigator.pop(context);
+              },
+              
+            ),
+
+            const Divider(color: Colors.white,),
+
+
+            const SizedBox(height: 30,),
+
+            ListTile(
+
+              title: Text(
+                'Versão 1.0',
+                style: GoogleFonts.poppins(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
+                textAlign: TextAlign.center,
+              ),
+
+            ),
+
+
+            const SizedBox(height: 30,),
+
+
 
           ],
         )
@@ -56,6 +317,7 @@ class _HomePageState extends State<HomePage> {
         iconTheme: const IconThemeData(color: Colors.black),
 
         elevation: 0,
+        
 
         backgroundColor: Colors.grey[300],
 
@@ -67,16 +329,13 @@ class _HomePageState extends State<HomePage> {
           children: [
             const SizedBox(width: 20,),
             Image.asset('lib/images/logoVerdeD.png', width: 35,),
-            Expanded(
-              flex: 1,
-              child: Padding(
-                padding: const EdgeInsets.only(right: 45),
-                child: Text('AGROLIFE', style: GoogleFonts.poppins(
-                  fontSize: 22,
-                  fontWeight: FontWeight.w400,
-                  color: primary
-                ),),
-              ),
+            Padding(
+              padding: const EdgeInsets.only(right: 45),
+              child: Text('AGROLIFE', style: GoogleFonts.poppins(
+                fontSize: 22,
+                fontWeight: FontWeight.w400,
+                color: primary
+              ),),
             ),
           ],
         ),
@@ -329,6 +588,197 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+
+
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: Text(
+              'Notícias',
+              style: GoogleFonts.poppins(
+                fontSize: 18,
+                fontWeight: FontWeight.w500
+              )
+            ),
+          ),
+
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: Row(
+              children: [
+
+                Container(
+                    width: 70,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: Style.colorBorderCardHomePage,
+                        width: 1,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade500,
+                          offset: const Offset(1.0, 2.0),
+                          blurRadius: 6.0,
+                          spreadRadius: 1.0
+                        ),
+                      ]
+
+                    ),
+                    child: const Icon(Icons.agriculture, size: 50,),
+                ),
+
+                const SizedBox(width: 12,),
+
+                Expanded(
+                  child: Container(
+                    width: 230,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all(
+                        color: Style.colorBorderCardHomePage,
+                        width: 2,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade500,
+                          offset: const Offset(1.0, 2.0),
+                          blurRadius: 6.0,
+                          spreadRadius: 1.0
+                        ),
+                      ],
+                    ),
+                   
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+
+                        children: [
+                
+                          Text(
+                            'Indústria prevê corte de safra',
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.dmSans(
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                
+                          Expanded(
+                            child: Text(
+                              'Antes do furacão, a indústria esperava que o Departamento de Agricultura dos Estados Unidos ...', 
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.dmSans(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ),
+                          
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+
+
+              ],
+            ),
+          ),
+
+
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: Row(
+              children: [
+
+                Container(
+                    width: 70,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: Style.colorBorderCardHomePage,
+                        width: 1,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade500,
+                          offset: const Offset(1.0, 2.0),
+                          blurRadius: 6.0,
+                          spreadRadius: 1.0
+                        ),
+                      ]
+
+                    ),
+                    child: const Icon(Icons.moving_outlined, size: 50,),
+                ),
+
+                const SizedBox(width: 12,),
+
+                Expanded(
+                  child: Container(
+                    width: 230,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all(
+                        color: Style.colorBorderCardHomePage,
+                        width: 2,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade500,
+                          offset: const Offset(1.0, 2.0),
+                          blurRadius: 6.0,
+                          spreadRadius: 1.0
+                        ),
+                      ],
+                    ),
+                   
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+
+                        children: [
+                
+                          Text(
+                            '18/11/2022 - Suíno',
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.dmSans(
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                
+                          Expanded(
+                            child: Text(
+                              'Dados do IBGE indicam redução do ritmo de crescimento da produção', 
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.dmSans(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ),
+                          
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+
+
+              ],
+            ),
+          ),
+
+          const SizedBox(height: 30,),
 
 
         ],
