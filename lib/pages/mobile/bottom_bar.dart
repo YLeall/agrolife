@@ -335,7 +335,7 @@ class _BottomBarState extends State<BottomBar> {
       ),
 
 
-      appBar: AppBar(
+      appBar: _searchIndex == 0 ? AppBar(
         
         leadingWidth: (gestureEnabled)
           ? null
@@ -351,9 +351,18 @@ class _BottomBarState extends State<BottomBar> {
 
         backgroundColor: Colors.grey[300],
 
-        title: const AppBarHome()
-      ),
-
+        title: const AppBarHome()) : AppBar(
+           iconTheme: const IconThemeData(color: Colors.black),
+            elevation: 0,
+            backgroundColor: Colors.grey[300],
+            leadingWidth: (gestureEnabled)
+              ? null
+              : 0,
+            leading: (gestureEnabled)
+              ? null
+              : Container(), 
+        ),
+     
 
       body: navigationPages.elementAt(_searchIndex),
 
