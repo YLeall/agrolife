@@ -16,6 +16,7 @@ class Style{
   static Color colorGradientClimateBlue2 = const Color.fromARGB(132, 98, 184, 246);
   static Color colorBorderCardHomePage = const Color(0xFFC8C5C5);
   static Color colorNoticiasHomePage = const Color.fromARGB(255, 196, 190, 190);
+  static Color colorBoxNotifications = const Color(0xFFFCF4E9);
   
   //static GoogleFonts tste = GoogleFonts();
 
