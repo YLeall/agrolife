@@ -1,4 +1,6 @@
+import 'package:agrolife/utils/style.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 var myAppBarMobile = AppBar(
   backgroundColor: Colors.grey[300],
@@ -30,3 +32,4 @@ var myDrawerMobile = Drawer(
     ],
   ),
 );
+

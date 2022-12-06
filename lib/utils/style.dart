@@ -12,6 +12,10 @@ class Style{
   static Color colorDivider = const Color(0xFFD2D2D2);
   static Color colorTextErase = const Color(0xFFAAAAAA);
   static Color colorInputForgotEmail = const Color (0xFFC1C7D0);
+  static Color colorGradientClimateBlue1 = const Color (0xFF62B8F6);
+  static Color colorGradientClimateBlue2 = Color.fromARGB(132, 98, 184, 246);
+  static Color colorBorderCardHomePage = const Color(0xFFC8C5C5);
+  
   //static GoogleFonts tste = GoogleFonts();
 
   static var textInput = GoogleFonts.poppins(

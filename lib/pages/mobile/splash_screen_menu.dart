@@ -1,4 +1,4 @@
-import 'package:agrolife/pages/mobile/home_page.dart';
+import 'package:agrolife/pages/mobile/bottom_bar.dart';
 import 'package:agrolife/responsive/responsive_layout.dart';
 import 'package:agrolife/responsive/tablet_scaffold.dart';
 import 'package:agrolife/utils/style.dart';
@@ -21,7 +21,7 @@ class _SplashScreenMenuState extends State<SplashScreenMenu> {
     super.initState();
     Future.delayed(const Duration (seconds: 5),(){
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> ResponsiveLayout(
-        mobileScaffold: const HomePage(),
+        mobileScaffold: const BottomBar(),
         tabletScaffold: const TabletScaffold(),
       ))
       );
